@@ -153,10 +153,17 @@ public class GameView extends javax.swing.JFrame {
     }
     
     private void removeTarget(JLabel target) {
-        ((JPanel) getContentPane()).remove(target);
-        targets.remove(target);
-//        repaint(target.getBounds()); // Only repaint the area where the target was
-    }
+    // Xóa target khỏi panel
+    ((JPanel) getContentPane()).remove(target);
+
+    // Xóa target khỏi danh sách
+    targets.remove(target);
+
+    // Yêu cầu cập nhật lại giao diện
+    ((JPanel) getContentPane()).revalidate();
+    ((JPanel) getContentPane()).repaint();
+}
+
     
     private boolean isOverlapping(int x1, int y1, int width1, int height1,
                               int x2, int y2, int width2, int height2) {
