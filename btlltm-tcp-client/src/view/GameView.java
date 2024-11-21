@@ -107,12 +107,12 @@ public class GameView extends javax.swing.JFrame {
     
     
     private void setupScoreLabels() {
-        redScoreLabel = new JLabel("Red Score: 0");
-        redScoreLabel.setFont(new Font("Arial", Font.BOLD, 16));
+        redScoreLabel = new JLabel("Số hạt gạo: 0");
+        redScoreLabel.setFont(new Font("Tahoma", Font.PLAIN, 18));
         redScoreLabel.setBounds(20, 20, 150, 30);
 
-        blueScoreLabel = new JLabel("Blue Score: 0");
-        blueScoreLabel.setFont(new Font("Arial", Font.BOLD, 16));
+        blueScoreLabel = new JLabel("Số hạt thóc: 0");
+        blueScoreLabel.setFont(new Font("Tahoma", Font.PLAIN, 18));
         blueScoreLabel.setBounds(20, 50, 150, 30);
 
         add(redScoreLabel);
@@ -141,11 +141,11 @@ public class GameView extends javax.swing.JFrame {
             public void mouseClicked(MouseEvent e) {
                 if (isRed && SwingUtilities.isLeftMouseButton(e)) {
                     redScore++;
-                    redScoreLabel.setText("Red Score: " + redScore);
+                    redScoreLabel.setText("Số hạt gạo: " + redScore);
                     removeTarget((JLabel) e.getSource());
                 } else if (!isRed && SwingUtilities.isRightMouseButton(e)) {
                     blueScore++;
-                    blueScoreLabel.setText("Blue Score: " + blueScore);
+                    blueScoreLabel.setText("Số hạt thóc: " + blueScore);
                     removeTarget((JLabel) e.getSource());
                 }
             }
@@ -157,14 +157,41 @@ public class GameView extends javax.swing.JFrame {
         targets.remove(target);
 //        repaint(target.getBounds()); // Only repaint the area where the target was
     }
+    
+    private boolean isOverlapping(int x1, int y1, int width1, int height1,
+                              int x2, int y2, int width2, int height2) {
+    return x1 < x2 + width2 && x1 + width1 > x2 &&
+           y1 < y2 + height2 && y1 + height1 > y2;
+}
 
+    
     private void spawnTarget(JLabel target) {
+    boolean overlap;
+    int x, y;
+
+    do {
+        overlap = false;
+        // Sinh vị trí ngẫu nhiên
         double angle = 2 * Math.PI * random.nextDouble();
         double distance = TARGET_RADIUS * random.nextDouble();
-        int x = (int) (CENTER_X + distance * Math.cos(angle)) - target.getWidth() / 2;
-        int y = (int) (CENTER_Y + distance * Math.sin(angle)) - target.getHeight() / 2;
-        target.setLocation(x, y);
-    }
+        x = (int) (CENTER_X + distance * Math.cos(angle)) - target.getWidth() / 2;
+        y = (int) (CENTER_Y + distance * Math.sin(angle)) - target.getHeight() / 2;
+
+        // Kiểm tra va chạm với các mục tiêu khác
+        for (JLabel existingTarget : targets) {
+            if (isOverlapping(x, y, target.getWidth(), target.getHeight(),
+                              existingTarget.getX(), existingTarget.getY(),
+                              existingTarget.getWidth(), existingTarget.getHeight())) {
+                overlap = true;
+                break;
+            }
+        }
+    } while (overlap);
+
+    // Gán vị trí hợp lệ cho mục tiêu
+    target.setLocation(x, y);
+}
+
     
     public void setWaitingRoom () {
         panel.setVisible(false);
