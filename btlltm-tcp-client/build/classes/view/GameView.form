@@ -439,10 +439,24 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" attributes="0">
+<<<<<<< HEAD
+=======
+              <EmptySpace min="589" pref="589" max="-2" attributes="0"/>
+              <Component id="btnLeaveGame" min="-2" pref="121" max="-2" attributes="0"/>
+          </Group>
+          <Group type="102" attributes="0">
+>>>>>>> 71721cc (Final version)
               <EmptySpace min="23" pref="23" max="-2" attributes="0"/>
               <Component id="btnStart" min="-2" pref="98" max="-2" attributes="0"/>
           </Group>
           <Group type="102" attributes="0">
+<<<<<<< HEAD
+=======
+              <EmptySpace min="23" pref="23" max="-2" attributes="0"/>
+              <Component id="infoPLayer" min="-2" pref="229" max="-2" attributes="0"/>
+          </Group>
+          <Group type="102" attributes="0">
+>>>>>>> 71721cc (Final version)
               <EmptySpace min="133" pref="133" max="-2" attributes="0"/>
               <Component id="lbWaiting" min="-2" pref="336" max="-2" attributes="0"/>
           </Group>
@@ -450,6 +464,7 @@
               <EmptySpace min="23" pref="23" max="-2" attributes="0"/>
               <Component id="panelPlayAgain" max="32767" attributes="0"/>
           </Group>
+<<<<<<< HEAD
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="23" pref="23" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
@@ -460,6 +475,11 @@
                   </Group>
                   <Component id="pbgTimer" min="-2" pref="687" max="-2" attributes="0"/>
               </Group>
+=======
+          <Group type="102" attributes="0">
+              <EmptySpace min="23" pref="23" max="-2" attributes="0"/>
+              <Component id="pbgTimer" min="-2" pref="687" max="-2" attributes="0"/>
+>>>>>>> 71721cc (Final version)
           </Group>
       </Group>
     </DimensionLayout>
@@ -474,6 +494,7 @@
                       <Component id="btnStart" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" attributes="0">
+<<<<<<< HEAD
                       <Component id="infoPLayer" min="-2" pref="34" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
@@ -489,6 +510,22 @@
                               <Component id="pbgTimer" min="-2" pref="27" max="-2" attributes="0"/>
                           </Group>
                       </Group>
+=======
+                      <EmptySpace min="24" pref="24" max="-2" attributes="0"/>
+                      <Component id="infoPLayer" min="-2" pref="34" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="450" pref="450" max="-2" attributes="0"/>
+                      <Component id="lbWaiting" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="-2" pref="520" max="-2" attributes="0"/>
+                      <Component id="panelPlayAgain" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="79" pref="79" max="-2" attributes="0"/>
+                      <Component id="pbgTimer" min="-2" pref="27" max="-2" attributes="0"/>
+>>>>>>> 71721cc (Final version)
                   </Group>
               </Group>
               <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
