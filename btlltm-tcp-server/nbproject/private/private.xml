@@ -3,13 +3,15 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-<<<<<<< HEAD
-            <file>file:/D:/PTIT-NetworkProgramming-master/btlltm-tcp-server/src/service/Client.java</file>
-            <file>file:/D:/PTIT-NetworkProgramming-master/btlltm-tcp-server/src/service/Room.java</file>
-=======
+            <file>file:/C:/Users/Admin/Desktop/PTIT-NetworkProgramming-master%20(1)/PTIT-NetworkProgramming-master/btlltm-tcp-server/src/service/Client.java</file>
+            <file>file:/C:/Users/Admin/Desktop/PTIT-NetworkProgramming-master%20(1)/PTIT-NetworkProgramming-master/btlltm-tcp-server/src/service/RoomManager.java</file>
+            <file>file:/C:/Users/Admin/Desktop/PTIT-NetworkProgramming-master%20(1)/PTIT-NetworkProgramming-master/btlltm-tcp-server/src/controller/UserController.java</file>
+            <file>file:/C:/Users/Admin/Desktop/PTIT-NetworkProgramming-master%20(1)/PTIT-NetworkProgramming-master/btlltm-tcp-server/src/service/ClientManager.java</file>
             <file>file:/C:/Users/Admin/Desktop/PTIT-NetworkProgramming-master%20(1)/PTIT-NetworkProgramming-master/btlltm-tcp-server/src/run/ServerRun.java</file>
+            <file>file:/C:/Users/Admin/Desktop/PTIT-NetworkProgramming-master%20(1)/PTIT-NetworkProgramming-master/btlltm-tcp-server/src/helper/CustumDateTimeFormatter.java</file>
+            <file>file:/C:/Users/Admin/Desktop/PTIT-NetworkProgramming-master%20(1)/PTIT-NetworkProgramming-master/btlltm-tcp-server/src/model/UserModel.java</file>
             <file>file:/C:/Users/Admin/Desktop/PTIT-NetworkProgramming-master%20(1)/PTIT-NetworkProgramming-master/btlltm-tcp-server/src/connection/DatabaseConnection.java</file>
->>>>>>> 71721cc (Final version)
+            <file>file:/C:/Users/Admin/Desktop/PTIT-NetworkProgramming-master%20(1)/PTIT-NetworkProgramming-master/btlltm-tcp-server/src/service/Room.java</file>
         </group>
     </open-files>
 </project-private>
