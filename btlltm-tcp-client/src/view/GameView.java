@@ -60,6 +60,7 @@ public class GameView extends javax.swing.JFrame {
      * Creates new form GameView
      */
     public GameView() {
+        loadBackground();
         initComponents();
         
         
@@ -320,10 +321,6 @@ public class GameView extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        buttonGroup1 = new javax.swing.ButtonGroup();
-        buttonGroup2 = new javax.swing.ButtonGroup();
-        buttonGroup3 = new javax.swing.ButtonGroup();
-        buttonGroup4 = new javax.swing.ButtonGroup();
         panel = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         lbQuestion1 = new javax.swing.JLabel();
@@ -368,16 +365,12 @@ public class GameView extends javax.swing.JFrame {
 
         lbQuestion1.setText("1. 61 + 23 = ?");
 
-        buttonGroup1.add(answer1a);
         answer1a.setText("jRadioButton1");
 
-        buttonGroup1.add(answer1b);
         answer1b.setText("jRadioButton2");
 
-        buttonGroup1.add(answer1c);
         answer1c.setText("jRadioButton3");
 
-        buttonGroup1.add(answer1d);
         answer1d.setText("jRadioButton4");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -414,16 +407,12 @@ public class GameView extends javax.swing.JFrame {
 
         lbQuestion2.setText("1. 61 + 23 = ?");
 
-        buttonGroup2.add(answer2a);
         answer2a.setText("jRadioButton1");
 
-        buttonGroup2.add(answer2b);
         answer2b.setText("jRadioButton2");
 
-        buttonGroup2.add(answer2c);
         answer2c.setText("jRadioButton3");
 
-        buttonGroup2.add(answer2d);
         answer2d.setText("jRadioButton4");
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
@@ -460,16 +449,12 @@ public class GameView extends javax.swing.JFrame {
 
         lbQuestion3.setText("1. 61 + 23 = ?");
 
-        buttonGroup3.add(answer3a);
         answer3a.setText("jRadioButton1");
 
-        buttonGroup3.add(answer3b);
         answer3b.setText("jRadioButton2");
 
-        buttonGroup3.add(answer3c);
         answer3c.setText("jRadioButton3");
 
-        buttonGroup3.add(answer3d);
         answer3d.setText("jRadioButton4");
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
@@ -506,16 +491,12 @@ public class GameView extends javax.swing.JFrame {
 
         lbQuestion4.setText("1. 61 + 23 = ?");
 
-        buttonGroup4.add(answer4a);
         answer4a.setText("jRadioButton1");
 
-        buttonGroup4.add(answer4b);
         answer4b.setText("jRadioButton2");
 
-        buttonGroup4.add(answer4c);
         answer4c.setText("jRadioButton3");
 
-        buttonGroup4.add(answer4d);
         answer4d.setText("jRadioButton4");
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
@@ -602,9 +583,8 @@ public class GameView extends javax.swing.JFrame {
         infoPLayer.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         infoPLayer.setText("Play game with:");
 
-        btnLeaveGame.setBackground(new java.awt.Color(255, 51, 51));
-        btnLeaveGame.setForeground(new java.awt.Color(255, 255, 255));
-        btnLeaveGame.setText("Leave Game");
+        btnLeaveGame.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/ExitIcon.png"))); // NOI18N
+        btnLeaveGame.setBorder(null);
         btnLeaveGame.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnLeaveGameActionPerformed(evt);
@@ -613,7 +593,8 @@ public class GameView extends javax.swing.JFrame {
 
         pbgTimer.setStringPainted(true);
 
-        btnStart.setText("Start");
+        btnStart.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/ClickIcon.png"))); // NOI18N
+        btnStart.setBorder(null);
         btnStart.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnStartActionPerformed(evt);
@@ -621,6 +602,7 @@ public class GameView extends javax.swing.JFrame {
         });
 
         lbWaiting.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        lbWaiting.setForeground(new java.awt.Color(255, 255, 255));
         lbWaiting.setText("Waiting host start game....");
 
         panelPlayAgain.setBorder(javax.swing.BorderFactory.createTitledBorder("Question?"));
@@ -654,7 +636,7 @@ public class GameView extends javax.swing.JFrame {
             .addGroup(panelPlayAgainLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(lbResult, javax.swing.GroupLayout.PREFERRED_SIZE, 324, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 22, Short.MAX_VALUE)
                 .addComponent(lbWaitingTimer, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(46, 46, 46)
                 .addComponent(btnYes, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -681,43 +663,39 @@ public class GameView extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(23, 23, 23)
-                .addComponent(btnStart, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(133, 133, 133)
-                .addComponent(lbWaiting, javax.swing.GroupLayout.PREFERRED_SIZE, 336, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(23, 23, 23)
-                .addComponent(panelPlayAgain, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(23, 23, 23)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(panelPlayAgain, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(infoPLayer, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(337, 337, 337)
-                        .addComponent(btnLeaveGame, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(pbgTimer, javax.swing.GroupLayout.PREFERRED_SIZE, 687, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(pbgTimer, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(8, 8, 8)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(lbWaiting, javax.swing.GroupLayout.PREFERRED_SIZE, 336, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(btnStart))
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(infoPLayer, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(btnLeaveGame)))
+                        .addContainerGap())))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(infoPLayer, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(27, 27, 27)
-                        .addComponent(btnLeaveGame, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(391, 391, 391)
-                        .addComponent(btnStart))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(infoPLayer, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(416, 416, 416)
-                                .addComponent(lbWaiting))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(486, 486, 486)
-                                .addComponent(panelPlayAgain, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(45, 45, 45)
-                                .addComponent(pbgTimer, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                        .addGap(31, 31, 31)
+                        .addComponent(btnLeaveGame)))
+                .addGap(18, 18, 18)
+                .addComponent(pbgTimer, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(355, 355, 355)
+                .addComponent(btnStart)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(lbWaiting)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(panelPlayAgain, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(20, 20, 20))
         );
 
@@ -827,10 +805,6 @@ public class GameView extends javax.swing.JFrame {
     private javax.swing.JButton btnNo;
     private javax.swing.JButton btnStart;
     private javax.swing.JButton btnYes;
-    private javax.swing.ButtonGroup buttonGroup1;
-    private javax.swing.ButtonGroup buttonGroup2;
-    private javax.swing.ButtonGroup buttonGroup3;
-    private javax.swing.ButtonGroup buttonGroup4;
     private javax.swing.JLabel infoPLayer;
     private javax.swing.JFrame jFrame1;
     private javax.swing.JFrame jFrame2;
